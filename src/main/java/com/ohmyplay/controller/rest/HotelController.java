@@ -18,6 +18,6 @@ public class HotelController {
 
     @GetMapping(value = "{city_id}", produces =  MediaType.APPLICATION_JSON_VALUE)
     public Hotel hotel(@PathVariable("city_id") int cityId) {
-        return hotelService.selectByCityId(cityId);
+        return hotelService.getHotel(cityId);
     }
 }

@@ -22,8 +22,8 @@ public class HomeController {
     @RequestMapping(value = "/", method = RequestMethod.GET)
     public String root(Model model) {
 
-        Hotel hotel = hotelService.selectByCityId(1);
-        City city = cityService.selectByCityId(1);
+        Hotel hotel = hotelService.getHotel(1);
+        City city = cityService.getCity(1);
 
         model.addAttribute("hotel", hotel);
         model.addAttribute("city", city);

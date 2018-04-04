@@ -11,7 +11,7 @@ public class HotelService {
     @Autowired
     private HotelMapper hotelMapper;
 
-    public Hotel selectByCityId(int city_id) {
+    public Hotel getHotel(int city_id) {
         return hotelMapper.selectByCityId(city_id);
     }
 }

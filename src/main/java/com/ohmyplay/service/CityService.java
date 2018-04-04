@@ -11,7 +11,7 @@ public class CityService {
     @Autowired
     private CityMapper cityMapper;
 
-    public City selectByCityId(int city_id) {
+    public City getCity(int city_id) {
         return cityMapper.selectCityById(city_id);
     }
 }
