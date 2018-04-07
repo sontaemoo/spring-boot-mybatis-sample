@@ -5,6 +5,8 @@ import com.ohmyplay.mapper.HotelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 public class HotelService {
 
@@ -13,5 +15,9 @@ public class HotelService {
 
     public Hotel getHotel(int city_id) {
         return hotelMapper.selectByCityId(city_id);
+    }
+
+    public List<Hotel> getHotelList() {
+        return hotelMapper.selectHotelList();
     }
 }

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"></meta>
+    <title></title>
+    <script src="/webjars/jquery/3.3.1/dist/jquery.js"></script>
+    <script>
+        $(function(){
+            alert("Hello Jquery");
+        });
+    </script>
+</head>
+<body>
+<h3>hotel  list :</h3>
+<dl th:each="hotel : ${hotelList}">
+    <dt>city</dt>
+    <dd th:text="${hotel.city}"></dd>
+    <dt>name</dt>
+    <dd th:text="${hotel.name}"></dd>
+    <dt>address</dt>
+    <dd th:text="${hotel.address}"></dd>
+    <dt>zip</dt>
+    <dd th:text="${hotel.zip}"></dd>
+    <hr/>
+</dl>
+
+<h3>City :</h3>
+<ul>
+    <li>
+        id: <dd th:text="${city.id}"></dd>
+    </li>
+    <li>
+        name: <dd th:text="${city.name}"></dd>
+    </li>
+    <li>
+        state: <dd th:text="${city.state}"></dd>
+    </li>
+    <li>
+        country: <dd th:text="${city.country}"></dd>
+    </li>
+</ul>
+
+<h3>Rest API</h3>
+<ul>
+    <li>
+        <a href="./api/hotel/1">hotel</a>
+    </li>
+    <li>
+        <a href="./api/city/1">city</a>
+    </li>
+</ul>
+
+<h3>Exception</h3>
+<a href="./exception">exception</a><br>
+<a href="./api/hotel/error">rest api exception</a>
+
+</body>
+</html>

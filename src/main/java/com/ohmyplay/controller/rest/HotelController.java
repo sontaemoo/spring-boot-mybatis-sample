@@ -1,6 +1,7 @@
 package com.ohmyplay.controller.rest;
 
 import com.ohmyplay.domain.Hotel;
+import com.ohmyplay.exception.OhmyplayException;
 import com.ohmyplay.service.HotelService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
@@ -20,4 +21,11 @@ public class HotelController {
     public Hotel hotel(@PathVariable("city_id") int cityId) {
         return hotelService.getHotel(cityId);
     }
+
+    @GetMapping(value = "/error", produces =  MediaType.APPLICATION_JSON_VALUE)
+    public Hotel error() {
+        throw new OhmyplayException("rest api error");
+    }
+
+
 }

@@ -6,4 +6,7 @@
     <select id="selectByCityId" resultType="Hotel">
         select * from hotel where city = #{id}
     </select>
+    <select id="selectHotelList" resultType="Hotel">
+        select * from hotel
+    </select>
 </mapper>
