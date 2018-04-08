@@ -18,8 +18,8 @@ public class HotelMapperTest {
     @Test
     public void selectByCityIdTest() {
         Hotel hotel = hotelMapper.selectByCityId(1);
-        assertThat(hotel.getName()).isEqualTo("Conrad Treasury Place");
-        assertThat(hotel.getAddress()).isEqualTo("William & George Streets");
+        assertThat(hotel.getName()).isEqualTo("Conrad Treasury Place1");
+        assertThat(hotel.getAddress()).isEqualTo("William & George Streets1");
         assertThat(hotel.getZip()).isEqualTo("4001");
     }
 }
